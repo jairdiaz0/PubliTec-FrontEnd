@@ -1,0 +1,14 @@
+<header>
+  <app-nav-bar></app-nav-bar>
+  <app-nav-bar-user></app-nav-bar-user>
+</header>
+<section class="justify-content-center d-flex">
+  <select [value]="null" (change)="prb($event)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+    <option value="{{item.router}}" [ngClass]="item.class" *ngFor="let item of typeList">
+      {{item.text}}
+    </option>
+  </select>
+</section>
+<main>
+  <router-outlet></router-outlet>
+</main>

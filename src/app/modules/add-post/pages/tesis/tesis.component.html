@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h2>Agregar Tesis</h2>
+    </div>
+  </div>
+
+  <form action="guardar_tesis.php" method="POST">
+    <div class="row">
+      <div class="col">
+        <div class="card card-body">
+          <div class="form-group">
+            <input type="text" name="titulo_tesis" class="form-control" placeholder="Titulo de la tesis:" autofocus>
+          </div>
+          <br>
+          <br>
+
+          <div class="form-group">
+            <input type="text" name="autor_tesis" class="form-control" placeholder="Nombre del autor:" autofocus>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-body">
+          <div class="form-group">
+            <select class="form-select" name="grado_tesis" id="grado_tesis" aria-label="Default select example">
+              <option selected>Grado Academico:</option>
+              <option value="1">[Seleccionar grado]</option>
+              <option value="Licenciatura">Licenciatura</option>
+              <option value="Especialidad">Especialidad</option>
+              <option value="Maestría">Maestría</option>
+              <option value="Doctorado">Doctorado</option>
+              <option value="Postdoctorado">Postdoctorado</option>
+            </select>
+          </div>
+          <br>
+          <br>
+
+          <select class="form-select" name="tesis_area" id="tesis_area" aria-label="Default select example">
+            <option selected>Área del conocimiento:*</option>
+            <option value="1">[Seleccione una opción]</option>
+            <option value="Ciencias Agrícolas y Forestales">Ciencias Agrícolas y Forestales</option>
+            <option value="Ciencias Biológicas">Ciencias Biológicas</option>
+            <option value="Ciencias de la Computación, Sistemas Computacionales, Informática">Ciencias de la
+              Computación, Sistemas Computacionales, Informática</option>
+            <option value="Ciencias de la Educación">Ciencias de la Educación</option>
+            <option value="Ciencias de la Tierra y el Medio Ambiente">Ciencias de la Tierra y el Medio Ambiente</option>
+            <option value="Ingenieria Electrica, Electrónica">Ingenieria Electrica, Electrónica</option>
+            <option value="Ingeniería Industrial Administrativa y Desarrollo Regional">Ingeniería Industrial
+              Administrativa y Desarrollo Regional</option>
+            <option value="Ingeniería Mecánica, Mecatronica">Ingeniería Mecánica, Mecatronica</option>
+            <option value="Ingeniería Química, Bioquímica, Alimentos Biotecnología">Ingeniería Química, Bioquímica,
+              Alimentos Biotecnología</option>
+          </select>
+          <br>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-body">
+          <select class="form-select" name="tesis_proposito" id="tesis_proposito" aria-label="Default select example">
+            <option selected>Propósito:*</option>
+            <option value="1">[Seleccione un propósito]</option>
+            <option value="Asimilación Tecnologica">Asimilación Tecnologica</option>
+            <option value="Creación">Creación</option>
+            <option value="Desarrollo Tecnológico">Desarrollo Tecnológico</option>
+            <option value="Difusión">Difusión</option>
+            <option value="Generación de conocimiento">Generación de conocimiento</option>
+            <option value="Investigación aplicada">Investigación aplicada</option>
+            <option value="Transferencia de Tecnología">Transferencia de Tecnología</option>
+          </select>
+          <br>
+          <h4>Fecha</h4>
+          <div class="form-group">
+            <br>
+            <h6>Fecha de Publicacion</h6>
+                <input type="date" name="tesis_fecha" class="form-control" placeholder="Fecha de publicación:" >
+          </div>
+          <br>
+          <div>
+            <h4>Subir PDF</h4>
+            <input type="file" name="archivo">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <br>
+          <textarea name="tesis_desc" rows="2" class="form-control"
+            placeholder="Descripción breve del producto"></textarea>
+          <br>
+        </div>
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <br>
+        <input type="submit" name="btn_arb" class="btn btn-boton btn-block " value="Publicar">
+        <a href="tabla_tesis.php">
+          <button type="button" class="btn btn-boton">Ver registrados</button>
+        </a>
+      </div>
+    </div>
+  </form>
+</div>

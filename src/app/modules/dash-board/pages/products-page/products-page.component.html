@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-12">
+    <app-filter-bar></app-filter-bar>
+  </div>
+  <div class="col-12">
+    <p class="h1 text-center">Publicaciones</p>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col" *ngFor="let item of headers">
+            {{item}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of products">
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.title}}</td>
+          <td>{{item.description}}</td>
+          <td>{{item.date}}</td>
+          <td>{{item.type}}</td>
+          <td>
+            <button [routerLink]="['/home/user/view', item.file.routeFile.route]"
+              [ngClass]="item.file.button.class">{{item.file.button.text}}</button>
+            <!-- {{item.file.routeFile.route}} -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

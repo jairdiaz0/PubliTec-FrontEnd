@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+          <div class="col text-center">
+              <h2>Agregar Estancia</h2>
+          </div>
+  </div>
+
+      <form action="" method="POST" enctype="multipart/form-data">
+          <div class="row">
+              <div class="col">
+                  <div class="card card-body">
+                      <div class="form-group">
+                      <input type="text" name="estancia_nom" class="form-control" placeholder="Nombre del proyecto:*" autofocus>
+                      </div>
+                      <br>
+                      <br>
+
+                      <div class="form-group">
+                          <input type="text" name="estancia_insti" class="form-control" placeholder="Institución:*" autofocus>
+                      </div>
+                      <br>
+                      <br>
+                  </div>
+              </div>
+
+                      <div class="col">
+                          <div class="card card-body">
+                              <div class="form-group">
+                              <h6>Fecha de inicio:</h6>
+                              <input type="date" name="estancia_fechai" class="form-control" placeholder="Fecha de inicio:*" autofocus>
+                              </div>
+                              <br>
+                              <br>
+                              <div class="form-group">
+                                  <input type="text" name="estancia_evidencia" class="form-control" placeholder="Evidencia (Oficio de liberación):*" autofocus>
+                              </div>
+                              <br>
+                              <br>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="card card-body">
+                              <div class="form-group">
+                                  <h6>Fecha de termino:</h6>
+                                  <input type="date" name="estancia_fechat" class="form-control" placeholder="Fecha de termino:*" autofocus>
+                              </div>
+                              <br>
+                              <br>
+                              <div>
+                                  <h4>Subir PDF</h4>
+                                  <input type="file" name="archivo">
+                               </div>
+                          </div>
+                      </div>
+              <div class="row">
+                  <div class="form-group">
+                      <br>
+                      <textarea name="estancia_desc" rows="2" class="form-control" placeholder="Objetivo general del proyecto realizado durante la estancia"></textarea>
+                      <br>
+                  </div>
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <br>
+                  <input type="submit" name="btn_arb" class="btn btn-boton btn-block " value="Publicar">
+                  <a href="tabla_estancia.php">
+                      <button type="button" class="btn btn-boton">Ver registrados</button>
+                  </a>
+
+              </div>
+
+          </div>
+      </form>
+</div>

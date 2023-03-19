@@ -1,0 +1,32 @@
+<main class="row align-items-center justify-content-center">
+  <div class="col-12">
+    <p class="h1 text-center">Bienvenido</p>
+  </div>
+  <div class="col-8 col-md-3">
+    <div class="row justify-content-end">
+      <div class="col-12 col-md-10">
+        <div class="card">
+          <img class="card-img-top" src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Foto de perfil">
+          <div class="card-body">
+            <p class="card-title h6 text-center">{{user.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 text-center">
+    <div class="card">
+      <div class="card-body">
+        <div *ngFor="let item of userData">
+          <label [for]="item.id" [ngClass]="item.label.class">{{item.label.text}}: </label>
+          <p [id]="item.id" [ngClass]="item.text.class">{{item.text.title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-3">
+      <div class="row justify-content-center" *ngFor="let item of buttons">
+        <button [routerLink]="item.button.router" [ngClass]="item.button.class">{{item.button.text}}</button>
+      </div>
+  </div>
+</main>

@@ -1,0 +1,32 @@
+<app-auth-nav></app-auth-nav>
+<main>
+  <form class="row justify-content-center" [formGroup]="formLogIn" (ngSubmit)="sendLogIn()">
+    <div class="col-12">
+      <div *ngFor="let item of form" class="row justify-content-center">
+        <div [ngClass]="item.container_class">
+          <div class="form-floating" [ngClass]="item.span?['input-group']:[]">
+            <input *ngIf="item.input" [type]="item.input.type" [ngClass]="item.input.class" [id]="item.id"
+            [placeholder]="item.input.placeholder" formControlName="{{item.id}}">
+            <label *ngIf="item.label" [for]="item.id" [ngClass]="item.label.class">{{item.label.text}}</label>
+            <span *ngIf="item.span" [ngClass]="item.span.class">{{item.span.text}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="row justify-content-center">
+        <div class="col-10 text-center">
+          <div [ngClass]="alert.default.class" role="alert">
+            {{alert.default.text}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="row mt-5 justify-content-around">
+        <button [routerLink]="['/auth', 'SignIn']" routerLinkActive="router-link-active"  class="col-10 col-md-5 col-lg-4 p-3 mb-4 mb-md-0 btn btn-lg btn-outline-danger">Registrarse</button>
+        <input type="submit" value="Iniciar Sesión" class="col-10 col-md-5 col-lg-4 p-3 btn btn-lg btn-outline-success">
+      </div>
+    </div>
+  </form>
+</main>
